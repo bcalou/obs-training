@@ -1,0 +1,5 @@
+(function(){
+function run(n,t,i){var a=new XMLHttpRequest;a.onreadystatechange=function(){if(this.readyState===4&&this.status===200){var t=n.createElement("script");t.type="text/javascript";t.innerHTML="(function() { var load = function() {"+a.responseText+";\n return this;}.bind({}); var _ = load();__CMD__ })()".replace(/__CMD__/g,i);(n.head||n.documentElement).appendChild(t)}};a.onerror=function(){};a.open("GET",t,!0);a.send()}
+function add(t,n){var i=t.createElement("script");i.type="text/javascript";i.src=n;i.async=!0;(t.head||t.documentElement).appendChild(i)}
+run(document, 'https://acdn.prod.pubstack.io/monitoring.js', '_.monitoring.pubstackAutoconfig(' + JSON.stringify({"endpoint":{"script":"https://acdn.prod.pubstack.io/monitoring.js","gateway":"https://intake.prod.pubstack.io/v1/intake"},"scopeId":"03314bf5-296e-457a-a608-b5c180995c1c","tagId":"6c9d91b6-476b-4385-b76a-cbdcba750b31","activation":{"pbjs":[{"global":"pbjs","adUnitNames":".*"}],"sdk":{"generic":false,"pbjs":false}},"bootstrapTime":1579030431155,"bootstrapVersion":"eb0ecb1","device":"desktop","browserName":"Firefox","browserVersion":"72","osName":"Ubuntu","country":"FR"}) + ');');
+})()
